@@ -12,4 +12,7 @@ public class GearItem
     public GearStatus Status { get; set; }
     public DateTime CreatedAt { get; set; }
     public ICollection<RentalRequest> RentalRequests { get; set; } = new List<RentalRequest>();
+    // Generated tsvector column — populated by PostgreSQL, never set by the app.
+    // Mapped as a computed column so EF reads it but never writes to it.
+    public NpgsqlTypes.NpgsqlTsVector SearchVector { get; set; } = null!;
 }

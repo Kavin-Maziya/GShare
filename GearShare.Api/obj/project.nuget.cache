@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "wo07Ayr9WEg=",
+  "dgSpecHash": "o61mQO+carw=",
   "success": true,
   "projectFilePath": "C:\\Users\\LCBitcube\\Desktop\\GShare\\GearShare.Api\\GearShare.Api.csproj",
   "expectedPackageFiles": [
@@ -21,6 +21,7 @@
     "C:\\Users\\LCBitcube\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\10.0.10\\microsoft.entityframeworkcore.analyzers.10.0.10.nupkg.sha512",
     "C:\\Users\\LCBitcube\\.nuget\\packages\\microsoft.entityframeworkcore.design\\10.0.10\\microsoft.entityframeworkcore.design.10.0.10.nupkg.sha512",
     "C:\\Users\\LCBitcube\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\10.0.10\\microsoft.entityframeworkcore.relational.10.0.10.nupkg.sha512",
+    "C:\\Users\\LCBitcube\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\10.0.10\\microsoft.entityframeworkcore.tools.10.0.10.nupkg.sha512",
     "C:\\Users\\LCBitcube\\.nuget\\packages\\microsoft.extensions.caching.memory\\10.0.10\\microsoft.extensions.caching.memory.10.0.10.nupkg.sha512",
     "C:\\Users\\LCBitcube\\.nuget\\packages\\microsoft.extensions.dependencymodel\\10.0.10\\microsoft.extensions.dependencymodel.10.0.10.nupkg.sha512",
     "C:\\Users\\LCBitcube\\.nuget\\packages\\microsoft.identitymodel.abstractions\\8.19.2\\microsoft.identitymodel.abstractions.8.19.2.nupkg.sha512",

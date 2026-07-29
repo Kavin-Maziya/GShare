@@ -5,6 +5,8 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using GearShare.Api.Services;
 using System.Text;
+using Microsoft.EntityFrameworkCore;
+using GearShare.Api.Data;
 
 
 
@@ -15,6 +17,9 @@ Log.Logger = new LoggerConfiguration()
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Host.UseSerilog();
+// EF core Database
+builder.Services.AddDbContext<GearShareDbContext>(options =>
+    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 
 builder.Services.AddControllers();

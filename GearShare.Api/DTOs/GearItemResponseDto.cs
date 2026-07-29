@@ -10,4 +10,5 @@ public class GearItemResponseDto
     public int DailyRateCents { get; set; }
     public string Status { get; set; } = string.Empty;
     public DateTime CreatedAt { get; set; }
+    public int      ActiveRequestCount { get; set; }
 }
