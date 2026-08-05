@@ -7,6 +7,7 @@ using GearShare.Api.Services;
 using System.Text;
 using Microsoft.EntityFrameworkCore;
 using GearShare.Api.Data;
+using GearShare.Api.Repositories;
 
 
 
@@ -18,6 +19,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Host.UseSerilog();
 // EF core Database
+// DbContext is scoped, so each HTTP request receives one unit of work.
 builder.Services.AddDbContext<GearShareDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
@@ -48,8 +50,9 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 
 builder.Services.AddAuthorization();
 
-// Services
+// Scoped dependencies share the request's DbContext without crossing requests.
 builder.Services.AddScoped<IAuthService, AuthService>();
+builder.Services.AddScoped<IGearRepository, GearRepository>();
 
 var app = builder.Build();
 

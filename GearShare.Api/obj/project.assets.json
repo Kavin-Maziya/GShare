@@ -3122,11 +3122,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\LCBitcube\\Desktop\\GShare\\GearShare.Api\\GearShare.Api.csproj",
+      "projectUniqueName": "C:\\Users\\LCBitcube\\Desktop\\GShare\\GShare\\GearShare.Api\\GearShare.Api.csproj",
       "projectName": "GearShare.Api",
-      "projectPath": "C:\\Users\\LCBitcube\\Desktop\\GShare\\GearShare.Api\\GearShare.Api.csproj",
+      "projectPath": "C:\\Users\\LCBitcube\\Desktop\\GShare\\GShare\\GearShare.Api\\GearShare.Api.csproj",
       "packagesPath": "C:\\Users\\LCBitcube\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\LCBitcube\\Desktop\\GShare\\GearShare.Api\\obj\\",
+      "outputPath": "C:\\Users\\LCBitcube\\Desktop\\GShare\\GShare\\GearShare.Api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\LCBitcube\\AppData\\Roaming\\NuGet\\NuGet.Config"

@@ -6,6 +6,8 @@ namespace GearShare.Api.Data;
 public class GearShareDbContext(DbContextOptions<GearShareDbContext> options)
     : DbContext(options)
 {
+    // Lazy-loading proxies are intentionally not enabled: serializing navigation
+    // properties could otherwise issue one query per entity (the N+1 problem).
     public DbSet<User>          Users          => Set<User>();
     public DbSet<GearItem>      GearItems      => Set<GearItem>();
     public DbSet<RentalRequest> RentalRequests => Set<RentalRequest>();
@@ -60,6 +62,7 @@ public class GearShareDbContext(DbContextOptions<GearShareDbContext> options)
             e.HasOne(r => r.GearItem)
              .WithMany(g => g.RentalRequests)
              .HasForeignKey(r => r.GearItemId)
+             // Rental requests cannot outlive the gear item they belong to.
              .OnDelete(DeleteBehavior.Cascade);
         });
 

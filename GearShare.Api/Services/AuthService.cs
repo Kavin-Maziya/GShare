@@ -21,7 +21,7 @@ public class AuthService(IConfiguration configuration) : IAuthService
         if (user is null || !BCrypt.Net.BCrypt.Verify(dto.Password, user.PasswordHash))
             throw new UnauthorizedActionException("Invalid email or password.");
 
-        // Build claims using Id + email + role
+        // These claims identify the caller and support later ownership/role checks.
         var claims = new[]
         {
             new Claim(JwtRegisteredClaimNames.Sub, user.Id.ToString()),
